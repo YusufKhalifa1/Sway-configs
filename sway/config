@@ -1,9 +1,3 @@
-# Read `man 5 sway` for a complete reference.
-input * {
-     xkb_layout "us"
-}
-
-
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -35,6 +29,19 @@ exec_always {
 	gsettings set org.gnome.desktop.default-applications.terminal exec-arg ''
 }
 
+
+
+#
+## Keyboard layouts
+#
+input * {
+     xkb_layout "us"
+}
+
+input type:keyboard {
+     xkb_layout us,ara
+     xkb_options grp:win_space_toggle,compose:caps
+}
 
 #
 ## Screen shots
